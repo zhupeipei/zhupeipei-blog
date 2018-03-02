@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
+title: Life is Experience
+subtitle: you always fell regret for the things you should have done, but didn't.
 description:
-author: John Doe
-language:
+author: Zhu Peipei
+language: zh-CN
 timezone:
 
 # URL
@@ -79,4 +79,5 @@ theme: maupassant
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/zhupeipei/zhupeipei.github.io.git
+  repo: git@github.com:zhupeipei/zhupeipei.github.io.git
+  branch: master
