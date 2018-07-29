@@ -1,19 +1,20 @@
-# JsBridge框架选型
-
+---
+title: JSBridge框架选型
+date: 2018/5/17 14:26:41
+tags:
+categories: [编程, Android, WebView]
+---
 
 ####JS调用Android有下面三种方式
-
 	•	webView.addJavascriptInterface()
 	•	WebViewClient.shouldOverrideUrlLoading()
 	•	WebChromeClient.onJsAlert()/onJsConfirm()/onJsPrompt() 方法分别回调拦截JS对话框alert()、confirm()、prompt()消息
 
 ####Android调用JS
-
 	•	webView.loadUrl(); 缺点：页面会刷新
 	•	webView.evaluateJavascript() 缺点：Android4.4以下不能使用
 
 ####JsBridge实现：
-
 	a.	Android调用JS是通过loadUrl(url),url中可以拼接要传给JS的对象
 	b.	JS调用Android是通过shouldOverrideUrlLoading/onJsPrompt
 	c.	JsBridge将沟通数据封装成Message，然后放进Queue,再将Queue进行传输
