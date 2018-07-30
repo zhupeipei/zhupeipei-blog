@@ -6,7 +6,7 @@ categories: [编程, Android, WebView]
 ---
 
 这篇文章介绍的相当详细
-https://mp.weixin.qq.com/s?__biz=MzIzOTU0NTQ0MA==&mid=2247486880&idx=1&sn=23a99bfbb84a4d81a93ef077648c23d8&chksm=e92930afde5eb9b9f50197f2b057b43d5bbeb0d427d7350b1753d3104d5f80799d98be2fb674&mpshare=1&scene=1&srcid=0206HJ59SRcsUfY1FLL3PZxI&key=bbabbd357fc2e77d69e8ff8a4b2a82b324539f84bdc13a99c3e90810680a84c2554e2ac495b8a21bd6e28f9bc8c3ce6276058c24dc83fd21de57bec8d0fe0516201bfa79d565e1c54ac10919bf5cbd0d&ascene=0&uin=MjIyMDg1MTcwMQ%3D%3D&devicetype=iMac+MacBookAir7%2C2+OSX+OSX+10.11.6+build(15G31)&version=12010310&nettype=WIFI&lang=zh_CN&fontScale=100&pass_ticket=skJyHUEc3cbp%2FP1ftxfAouU1lLnGFduzq0f2%2BFTZg3KgD02TngGH5FA2WdaKHPPN
+[为什么你做的H5开屏那么慢？H5首屏秒开方案探讨](https://mp.weixin.qq.com/s?__biz=MzIzOTU0NTQ0MA==&mid=2247486880&idx=1&sn=23a99bfbb84a4d81a93ef077648c23d8)
 
 
 如果采用默认的cache设置，WebView 会直接读取缓存而不会去请求，说明WebSettings.LOAD_DEFAULT这个模式是根据cache-control决定是否从网络上获取数据。

@@ -5,22 +5,22 @@ tags:
 categories: [编程, Android, WebView]
 ---
 
-####JS调用Android有下面三种方式
-	•	webView.addJavascriptInterface()
-	•	WebViewClient.shouldOverrideUrlLoading()
-	•	WebChromeClient.onJsAlert()/onJsConfirm()/onJsPrompt() 方法分别回调拦截JS对话框alert()、confirm()、prompt()消息
+#### JS调用Android有下面三种方式
+•	webView.addJavascriptInterface()
+•	WebViewClient.shouldOverrideUrlLoading()
+•	WebChromeClient.onJsAlert()/onJsConfirm()/onJsPrompt() 方法分别回调拦截JS对话框alert()、confirm()、prompt()消息
 
-####Android调用JS
-	•	webView.loadUrl(); 缺点：页面会刷新
-	•	webView.evaluateJavascript() 缺点：Android4.4以下不能使用
+#### Android调用JS
+•	webView.loadUrl(); 缺点：页面会刷新
+•	webView.evaluateJavascript() 缺点：Android4.4以下不能使用
 
-####JsBridge实现：
-	a.	Android调用JS是通过loadUrl(url),url中可以拼接要传给JS的对象
-	b.	JS调用Android是通过shouldOverrideUrlLoading/onJsPrompt
-	c.	JsBridge将沟通数据封装成Message，然后放进Queue,再将Queue进行传输
+#### JsBridge实现：
+a.	Android调用JS是通过loadUrl(url),url中可以拼接要传给JS的对象
+b.	JS调用Android是通过shouldOverrideUrlLoading/onJsPrompt
+c.	JsBridge将沟通数据封装成Message，然后放进Queue,再将Queue进行传输
 
 
-####目前github上主流的JsBridge框架有：
+#### 目前github上主流的JsBridge框架有：
 
 | 框架(数据截至 2018-05-07) | star数 | 发布者背景 | 最近一次更新时间 | 拦截方式 |优点 | 缺点 |
 |----------|:-------------:|------:|
@@ -37,7 +37,7 @@ categories: [编程, Android, WebView]
 
 JsBridge目前已经没有以前那么热了，目前更多的专注点在Weex和RN以及Google的Flutter和Fushia。
 
-实际跑了下pengwei1024和wendux的JsBridge，对比如下：
+实际跑了下pengwei1024和wendux的JsBridge，对比如下：  
 1. pengwei1024是根据module来划分功能块，结构很清晰；wendux根据JsApi定义，结构分解也很不错；
 2. pengwei1024实现功能比较实用，如获取定位信息、拍照（拍照完成后需要把照片在html中显示因为需要传输数据所以app会卡住）、分享等功能；
 3. wendux有两个功能是pengwei1024没有的，一是可以实现一次调用多次返回（在上传进度条显示会很有效），二是与Fly.js结合无需webview设置跨域也能进行跨域请求（其原理是将请求拦截交给JsBridge处理）。

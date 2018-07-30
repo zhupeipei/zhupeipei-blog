@@ -4,7 +4,7 @@ date: 2018/4/4 16:14:47
 tags:
 categories: [编程, SQL]
 ---
-1. WITH---AS用法
+#### 1. WITH---AS用法
 ```
 WITH user_info AS
 (select *
@@ -29,7 +29,7 @@ select ui.I_USER_CODE, ui.I_USER_NAME, ui.MOBILE, ui.EMAIL
     on ui.I_USER_CODE = uip.I_USER_CODE;
 ```
 
-2. FOR循环
+#### 2. FOR循环
 ```
 BEGIN
   FOR a in (SELECT m.MERCHANDISE_CODE as merchandiseCode FROM (SELECT * FROM TT_POL_OVERSTOCK WHERE BATCH_NO IN (TO_CHAR(add_months(sysdate, -2),'yyyyMM'), TO_CHAR(add_months(sysdate, -1),'yyyyMM'), TO_CHAR(sysdate,'yyyyMM'))) o LEFT JOIN TT_POL_MERCHANDISE m ON o.ASC_CODE=m.SELLER_CODE AND o.PART_CODE=m.PART_CODE WHERE AUTO_REMOVE_FLAG=1) LOOP
@@ -37,13 +37,13 @@ BEGIN
   END LOOP;
 END;
 ```
-3. INSERT多条语句
+#### 3. INSERT多条语句
 ```
 INSERT INTO TABLE_NAME (SELECT * FROM TABLE_NAME1)
 INSERT INTO TABLE_NAME (字段1) (字段1值)
 ```
 
-4. 查询出col中符合某些条件的结果
+#### 4. 查询出col中符合某些条件的结果
 例如查询某个ascCode其batchNo中在近三个月中未出现的记录
 ```
 WITH T AS (SELECT ASC_CODE, PART_CODE FROM TT_POL_OVERSTOCK WHERE BATCH_NO IN (TO_CHAR(add_months(sysdate, -2),'yyyyMM'), TO_CHAR(add_months(sysdate, -1),'yyyyMM'), TO_CHAR(sysdate,'yyyyMM')))

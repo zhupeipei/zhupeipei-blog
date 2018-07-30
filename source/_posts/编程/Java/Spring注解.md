@@ -5,7 +5,7 @@ tags:
 categories: [编程, Java]
 ---
 
-1. @ConfigurationProperties
+## 1. @ConfigurationProperties
 可以将配置文件封装为实体类。
 
 有时候有这样子的情景，我们想把配置文件的信息，读取并自动封装成实体类，这样子，我们在代码里面使用就轻松方便多了，这时候，我们就可以使用@ConfigurationProperties，它可以把同类的配置信息自动封装成实体类
@@ -82,7 +82,7 @@ public String hellTask(){
 ```
 如果发现@ConfigurationPropertie不生效，有可能是项目的目录结构问题，你可以通过@EnableConfigurationProperties(ConnectionSettings.class)来明确指定需要用哪个实体类来装载配置信息。
 
-2. @RestControllerEndpoint 和 @ControllerEndpoint
+## 2. @RestControllerEndpoint 和 @ControllerEndpoint
 这两个可以用于自定义的actuator的端点
 配置如下：
 ```

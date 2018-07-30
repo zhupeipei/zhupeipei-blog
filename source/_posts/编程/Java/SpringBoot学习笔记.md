@@ -5,8 +5,8 @@ tags:
 categories: [编程, Java]
 ---
 
-1. actuator  
-1.1 health
+### 1. actuator  
+#### 1.1 health
 @Component
 public class ExampleHealthIndicator implements HealthIndicator {
 
@@ -17,7 +17,7 @@ public class ExampleHealthIndicator implements HealthIndicator {
 
 }
 
-1.2 info
+#### 1.2 info
 @Bean
 	public HealthIndicator helloHealthIndicator() {
 		return new HealthIndicator() {
