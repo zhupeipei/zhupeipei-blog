@@ -2,7 +2,7 @@
 title: 解决Symantec证书在Android或者手机版Chrome不信任的问题
 date: 2017/12/26 14:1:59
 tags:
-categories: [编程]
+categories: [编程, 网络]
 ---
 
 ## 解决Symantec证书在Android或者手机版Chrome不信任的问题
@@ -17,7 +17,7 @@ categories: [编程]
 2. 由于Google计划在2018年10月23号后发布的Chrome版本中，不再信任Symantec原PKI系统签发的证书。
 
 在通过域名访问时，会出现提示不受信任，电脑端会弹出添加例外等现象。通过[https://myssl.com](https://myssl.com)进行检测域名时出现提示证书链不完整。如下图所示：
-![SSL-TLS安全评估报告.png](./SSL-TLS安全评估报告.png)
+![SSL-TLS安全评估报告.png](解决Symantec证书在Android或者手机版Chrome不信任的问题/SSL-TLS安全评估报告.png)
 
 解决措施为在证书校验时添加中间链证书，这样myssl检测还是会出现中间链不完整，但是浏览器因为能拿到中间证书，就不会要求浏览器添加例外了。
 
