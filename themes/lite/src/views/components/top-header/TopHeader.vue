@@ -1,7 +1,7 @@
 <template>
   <blur-div id="lite-header" :blur="blur">
     <img v-if="avatar.enable" class="avatar" :src="avatar.url" alt="avatar"/>
-    <p class="author">{{ site.author }}</p>
+    <!--<p class="author">{{ site.author }}</p>-->
     <p class="description">{{ site.description }}</p>
   </blur-div>
 </template>
@@ -20,10 +20,18 @@
     padding: 1rem;
   }
 
+  /*.avatar {*/
+    /*display: inline-block;*/
+    /*width: 4.3rem;*/
+    /*height: 4.3rem;*/
+    /*border-radius: 50%;*/
+    /*box-shadow: 1px 1px 3px white;*/
+  /*}*/
+
   .avatar {
     display: inline-block;
-    width: 4.3rem;
-    height: 4.3rem;
+    width: 10rem;
+    height: 4rem;
     border-radius: 50%;
     box-shadow: 1px 1px 3px white;
   }
